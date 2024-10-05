@@ -35,9 +35,11 @@ int	main(void)
 
 	fputs("test string\n", stdout);
 	// ft_strlen
+	fputs("test ft_strlen\n", stdout);
 	for (int i = 0; strs[i] != NULL; ++i)
 		assert(strlen(strs[i]) == ft_strlen(strs[i]));
 	// ft_memset
+	fputs("test ft_memset\n", stdout);
 	for (int i = -512; i <= 512; ++i)
 	{
 		assert(s1 == memset(s1, i, 100));
@@ -45,6 +47,7 @@ int	main(void)
 		assert(memcmp(s1, s2, 100) == 0);
 	}
 	// ft_memcpy
+	fputs("test ft_memcpy\n", stdout);
 	for (int i = 0; strs[i] != NULL; ++i)
 		for (int j = 0; j <= 100; ++j)
 		{
@@ -53,6 +56,7 @@ int	main(void)
 			assert(memcmp(s1, s2, j) == 0);
 		}
 	// ft_memmove
+	fputs("test ft_memmove\n", stdout);
 	for (int i = 0; i < 50; ++i)
 		for (int j = 0; i + j < 100; ++j)
 		{
@@ -61,29 +65,35 @@ int	main(void)
 			assert(memcmp(s1, s2, j) == 0);
 		}
 	// ft_strchr
-	for (int i = 0; i <= 50000; ++i)
+	fputs("test ft_strchr\n", stdout);
+	for (int i = -0xFFFF; i <= 0xFFFF; ++i)
 		for (int j = 0; strs[j] != NULL; ++j)
 			assert(strchr(strs[j], i) == ft_strchr(strs[j], i));
 	// ft_strrchr
-	for (int i = 0; i <= 50000; ++i)
+	fputs("test ft_strrchr\n", stdout);
+	for (int i = -0xFFFF; i <= 0xFFFF; ++i)
 		for (int j = 0; strs[j] != NULL; ++j)
 			assert(strrchr(strs[j], i) == ft_strrchr(strs[j], i));
 	// ft_strncmp
+	fputs("test ft_strncmp\n", stdout);
 	for (int i = 0; strs[i] != NULL; ++i)
 		for (int j = 0; strs[j] != NULL; ++j)
 			for (int k = 0; k <= 100; ++k)
 				assert(sign(strncmp(strs[i], strs[j], k)) == sign(ft_strncmp(strs[i], strs[j], k)));
 	// ft_memchr
-	for (int i = -512; i <= 512; ++i)
+	fputs("test ft_memchr\n", stdout);
+	for (int i = -0xFFF; i <= 0xFFF; ++i)
 		for (int j = 0; strs[j] != NULL; ++j)
 			for (int k = 0; k <= 100; ++k)
 				assert(memchr(strs[j], i, k) == ft_memchr(strs[j], i, k));
 	// ft_memcmp
+	fputs("test ft_memcmp\n", stdout);
 	for (int i = 0; strs[i] != NULL; ++i)
 		for (int j = 0; strs[j] != NULL; ++j)
 			for (int k = 0; k <= 100; ++k)
 				assert(sign(memcmp(strs[i], strs[j], k)) == sign(ft_memcmp(strs[i], strs[j], k)));
 	// ft_strdup
+	fputs("test ft_strdup\n", stdout);
 	for (int i = 0; strs[i] != NULL; ++i)
 	{
 		char	*dup1 = strdup(strs[i]);
