@@ -6,7 +6,7 @@
 /*   By: wchoe <wchoe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 16:37:58 by wchoe             #+#    #+#             */
-/*   Updated: 2024/10/04 16:25:44 by wchoe            ###   ########.fr       */
+/*   Updated: 2024/10/06 16:00:11 by wchoe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	main(void)
 						"aa", "ab", "az", "bb", "bz", "zz", "AA", "AZ", "ZA", "ZZ",
 						"aaa", "a+a", "a-a", "a*a", "a/a", "zza", "zzz",
 						"\t", "\r", "\a", "aaaaaa", "bbbbbbbbbbbbbbbbb", "cccccccccccccccc",
-						"\001", "\002", "\003", "\004", "\005", "\007",
+						"\1", "\x7F", "\x80", "\xFF", "abcdef", "naginaig",
 						"aa\001bb\\\007\n!@#$^&*()|%%", "NAGINAGI", "Hello World!",
 						"aspoidf7vw597300mj-d08rc92rn7918r39f8ba-9ef8 yayf78d6-v8a98dfujqk23r 89d7as-d8 audsf23 r",
 						"000", "1234x1234", "\t\r   ---\a", "\t\r -1234", "-12340++a77", "2147483647", "2147483648", "-2147483647", "-2147483648",

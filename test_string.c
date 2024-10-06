@@ -24,7 +24,7 @@ int	main(void)
 						"aa", "ab", "az", "bb", "bz", "zz", "AA", "AZ", "ZA", "ZZ",
 						"aaa", "a+a", "a-a", "a*a", "a/a", "zza", "zzz",
 						"\t", "\r", "\a", "aaaaaa", "bbbbbbbbbbbbbbbbb", "cccccccccccccccc",
-						"\001", "\002", "\003", "\004", "\005", "\007",
+						"\x7F", "\x80", "\xFF", "naignagi", "12345abcdef", "!@#$%%^&*()",
 						"aa\001bb\\\007\n!@#$^&*()|%%", "NAGINAGI", "Hello World!",
 						"aspoidf7vw597300mj-d08rc92rn7918r39f8ba-9ef8 yayf78d6-v8a98dfujqk23r 89d7as-d8 audsf23 r",
 						"000", "1234x1234", "\t\r   ---\a", "\t\r -1234", "-12340++a77", "2147483647", "2147483648", "-2147483647", "-2147483648",

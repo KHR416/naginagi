@@ -6,7 +6,7 @@
 /*   By: wchoe <wchoe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 16:49:09 by wchoe             #+#    #+#             */
-/*   Updated: 2024/10/05 18:01:32 by wchoe            ###   ########.fr       */
+/*   Updated: 2024/10/06 16:08:24 by wchoe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main(void)
 						"aa", "ab", "az", "bb", "bz", "zz", "AA", "AZ", "ZA", "ZZ",
 						"aaa", "a+a", "a-a", "a*a", "a/a", "zza", "zzz", "AAA", "ZZZ",
 						"\t", "\r", "\a", "aaaaaa", "bbbbbbbbbbbbbbbbb", "cccccccccccccccc",
-						"\001", "\002", "\003", "\004", "\005", "\007",
+						"naginagi", "\x7F", "\x80", "\xFF", "yeah", "123456asdfb",
 						"aa\001bb\\\007\n!@#$^&*()|%%", "NAGINAGI", "Hello World!",
 						"aspoidf7vw597300mj-d08rc92rn7918r39f8ba-9ef8 yayf78d6-v8a98dfujqk23r 89d7as-d8 audsf23 r",
 						"000", "1234x1234", "\t\r   ---\a", "\t\r -1234", "-12340++a77", "2147483647", "2147483648", "-2147483647", "-2147483648",
@@ -43,6 +43,11 @@ int	main(void)
 			free(mem1);
 			free(mem2);
 		}
+	for (size_t i = 1; i <= 1000; ++i)
+		assert(ft_calloc(-1, i) == NULL);
+	for (size_t i = 1; i <= 1000; ++i)
+		assert(ft_calloc(i, -1) == NULL);
+	assert(ft_calloc(0x40000000, 0x40000000) == NULL);
 	fputs("OK :)\n", stdout);
 	return (0);
 }

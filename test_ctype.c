@@ -6,7 +6,7 @@
 /*   By: wchoe <wchoe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 10:48:16 by wchoe             #+#    #+#             */
-/*   Updated: 2024/10/03 15:55:07 by wchoe            ###   ########.fr       */
+/*   Updated: 2024/10/06 16:00:54 by wchoe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 int	main(void)
 {
 	fputs("test ctype\n", stdout);
-	for (unsigned char c = 0; c <= 0x7F; ++c)
+	for (int c = EOF; c <= 0xFF; ++c)
 	{
 		assert(my_bool(isalpha(c)) == my_bool(ft_isalpha(c)));
 		assert(my_bool(isdigit(c)) == my_bool(ft_isdigit(c)));
